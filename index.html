@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Sugar Drop Baker | Mill Woods, Edmonton (preview)</title>
-<meta name="description" content="Cake shop at 3007 24 Ave NW. Call to confirm availability. Free website preview by Local Studio. Not the official site.">
+<meta name="description" content="Birthday cake, custom cake and cake design on 3007 24 Ave NW, Mill Woods. Free website preview by Whyte Web. Not the official site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
   .top nav { display: flex; gap: 26px; align-items: center; font-weight: 600; font-size: 15px; }
   .top nav a { text-decoration: none; }
   .top nav a:not(.pill):hover { text-decoration: underline; text-underline-offset: 4px; }
-  .pill { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--ink); }
+  .pill { white-space: nowrap; display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--ink); }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 16px; }
   .btn-main { background: var(--accent); color: var(--accent-ink); }
   .btn-line { border: 1.5px solid var(--ink); }
@@ -71,6 +71,7 @@
   .talk { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); padding: 44px 0; }
   .talk .score { font: 700 96px/0.9 var(--display); color: var(--accent); }
   .talk p { margin: 0 0 14px; font-size: 19px; }
+  .glink { font-weight: 700; color: var(--accent); text-underline-offset: 5px; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { display: inline-flex; gap: 8px; align-items: center; padding: 8px 14px; border-radius: 999px; background: var(--soft); font-size: 15px; font-weight: 600; }
   .chip em { font-style: normal; color: var(--muted); font-weight: 400; }
@@ -86,12 +87,19 @@
   footer { padding: 36px 0 48px; font-size: 14px; color: var(--muted); }
   footer .wrap { display: grid; gap: 8px; }
 
-  .flip .hero { grid-template-columns: 0.9fr 1.1fr; }
-  .flip .hero > :first-child, .flip .menu-grid > :first-child { order: 2; }
-  .flip .arch img { border-radius: 28px 28px 999px 999px; }
-  .flip .badge { left: auto; right: -28px; }
+  @media (min-width: 901px) {
+    .flip .hero { grid-template-columns: 0.9fr 1.1fr; }
+    .flip .hero > :first-child, .flip .menu-grid > :first-child { order: 2; }
+    .flip .arch img { border-radius: 28px 28px 999px 999px; }
+    .flip .badge { left: auto; right: -28px; }
+  }
   @media (max-width: 860px) {
-    .top nav a:not(.pill) { display: none; }
+    .top { display: none; }
+    .hero { padding-top: 20px; }
+    h1 { font-size: 42px; margin: 6px 0 12px; }
+    h1 em { font-size: 0.6em; }
+    .lead { font-size: 17px; margin-bottom: 18px; }
+    .status { margin-top: 16px; }
     .hero { grid-template-columns: 1fr; gap: 32px; padding-bottom: 48px; }
     .arch { max-width: 420px; }
     .badge { left: 12px; bottom: 16px; }
@@ -107,7 +115,7 @@
 </style>
 </head>
 <body class="">
-<div class="notice">Free website preview made by <b>Local Studio</b> for Sugar Drop Baker. Not the official site.</div>
+<div class="notice">Free website preview made by <b>Whyte Web</b> for Sugar Drop Baker. Not the official site.</div>
 <div class="wrap top">
   <a class="word" href="#top">Sugar Drop Baker</a>
   <nav aria-label="Sections"><a href="#menu">What we make</a><a href="#visit">Hours and directions</a><a class="pill" href="tel:+18253330209">(825) 333-0209</a></nav>
@@ -118,10 +126,10 @@
     <div>
       <div class="kicker">Cake shop in Mill Woods, Edmonton</div>
       <h1>Sugar Drop Baker<em>Custom cakes in Mill Woods.</em></h1>
-      <p class="lead">Cake shop at 3007 24 Ave NW. Call to confirm availability.</p>
+      <p class="lead">Birthday cake, custom cake and cake design on 3007 24 Ave NW, Mill Woods.</p>
       <div class="ctas">
         <a class="btn btn-main" href="tel:+18253330209">Call (825) 333-0209</a>
-        <a class="btn btn-line" href="#menu">What reviewers mention</a>
+        <a class="btn btn-line" href="#menu">Cakes and treats</a>
       </div>
       <div class="status"><i class="k-dot" data-dot></i><span data-state></span><small data-sub></small></div>
     </div>
@@ -131,16 +139,18 @@
     </div>
   </header>
 
+  <div class="wrap" style="padding-bottom:64px; --k-accent-text: var(--accent)"><ul class="k-facts" aria-label="Contact"><li><b>Call</b><a href="tel:+18253330209">(825) 333-0209</a></li><li><b>Address</b><span>3007 24 Ave NW</span></li><li><b>Today</b><span data-today>Call to check</span></li></ul></div>
+
   <section class="menu" id="menu">
     <div class="wrap menu-grid">
       <div>
-        <h2>The things people come back for.</h2>
-        <p class="sub">Straight from Sugar Drop Baker's Google reviews: what customers mention most, and how often.</p>
+        <h2>What Google reviewers mention.</h2>
+        <p class="sub">Picked from what 299 Google reviewers mention most. Ask about anything else when you call.</p>
         <a class="btn btn-main" href="tel:+18253330209">Call to order</a>
       </div>
       <div>
-        <ul><li><span class="s-name">Birthday cake</span><span class="s-meta">19 Google reviews mention it</span></li><li><span class="s-name">Custom cake</span><span class="s-meta">17 Google reviews mention it</span></li><li><span class="s-name">Cake design</span><span class="s-meta">13 Google reviews mention it</span></li></ul>
-        <p class="note">Prices depend on size and design. Call for a quote.</p>
+        <ul><li><span class="s-name">Birthday cake</span><span class="s-meta">Ask for a price</span></li><li><span class="s-name">Custom cake</span><span class="s-meta">Ask for a price</span></li><li><span class="s-name">Cake design</span><span class="s-meta">Ask for a price</span></li></ul>
+        <p class="note">Call for pricing.</p>
       </div>
     </div>
   </section>
@@ -156,8 +166,8 @@
   <div class="wrap talk">
     <div class="score">4.6</div>
     <div>
-      <p>299 people have reviewed Sugar Drop Baker on Google. What they mention most:</p>
-      <div class="chips"><span class="chip">delicious cake<em>49</em></span><span class="chip">birthday cake<em>19</em></span><span class="chip">custom cake<em>17</em></span><span class="chip">icing<em>15</em></span><span class="chip">fresh cake<em>13</em></span><span class="chip">cake design<em>13</em></span></div>
+      <p>299 people have reviewed Sugar Drop Baker on Google.</p>
+      <a class="glink" href="https://www.google.com/maps/place/Sugar+drop+baker/data=!4m7!3m6!1s0x53a01968f14c2fcf:0x5d2aae18711750c7!8m2!3d53.4543621!4d-113.3839689!16s%2Fg%2F11l2ycqrr_!19sChIJzy9M8WgZoFMRx1AXcRiuKl0" target="_blank" rel="noopener">Read them on Google</a>
     </div>
   </div>
 
@@ -187,7 +197,7 @@
 
 <footer>
   <div class="wrap">
-    <span>Preview made by Local Studio, Edmonton, for Sugar Drop Baker. Details from the public Google listing (Oct 27, 2026). Not the official website.</span>
+    <span>Preview made by Whyte Web, Edmonton, for Sugar Drop Baker. Details from the public Google listing (Oct 27, 2026). Not the official website.</span>
     <a href="https://www.google.com/maps/place/Sugar+drop+baker/data=!4m7!3m6!1s0x53a01968f14c2fcf:0x5d2aae18711750c7!8m2!3d53.4543621!4d-113.3839689!16s%2Fg%2F11l2ycqrr_!19sChIJzy9M8WgZoFMRx1AXcRiuKl0" target="_blank" rel="noopener">Sugar Drop Baker on Google Maps</a>
     <span>Photos: <a href="https://commons.wikimedia.org/wiki/File:Birthday_Cake_(decorated).jpg" target="_blank" rel="noopener">Horacio Cambeiro</a> (CC BY 3.0); <a href="https://commons.wikimedia.org/wiki/File:Summer_wedding_cake_with_flower.jpg" target="_blank" rel="noopener">Kimberly Vardeman</a> (CC BY 2.0); <a href="https://commons.wikimedia.org/wiki/File:Cheshire_cupcakes.jpg" target="_blank" rel="noopener">Katjaskupcakes katja Seaton</a> (CC BY 3.0); <a href="https://commons.wikimedia.org/wiki/File:Fondant_Cake_decorated_with_flowers.jpg" target="_blank" rel="noopener">https://www.pexels.com/@aliciazinn</a> (CC0), via Wikimedia Commons. Sample photos until Sugar Drop Baker adds their own.</span>
   </div>
@@ -206,6 +216,17 @@
   .k-week i.on { background: var(--k-accent); }
   .k-week i.today { outline: 2px solid currentColor; outline-offset: 1px; }
   .k-callbar { display: none; }
+  .k-facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .k-facts li { display: grid; gap: 2px; padding: 16px 20px; border: 1px solid color-mix(in srgb, currentColor 16%, transparent); border-radius: 14px; min-width: 0; }
+  .k-facts b { font-size: 13.5px; font-weight: 700; opacity: 0.7; }
+  .k-facts a, .k-facts span { font-size: 18px; font-weight: 600; color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+  @media (max-width: 760px) { .k-facts { grid-template-columns: 1fr; gap: 8px; } .k-facts li { padding: 12px 16px; } }
+  .k-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; counter-reset: step; }
+  .k-steps li { counter-increment: step; display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: baseline; padding: 18px 20px; border: 1px solid color-mix(in srgb, currentColor 16%, transparent); border-radius: 14px; }
+  .k-steps li::before { content: counter(step); grid-row: span 2; font-weight: 800; font-size: 22px; line-height: 1; color: var(--k-accent-text, currentColor); }
+  .k-steps b { font-size: 17px; }
+  .k-steps span { font-size: 15px; opacity: 0.78; }
+  @media (max-width: 760px) { .k-steps { grid-template-columns: 1fr; gap: 10px; } }
   .k-sample { position: absolute; z-index: 2; left: 16px; top: 16px; padding: 4px 11px; border-radius: 999px; background: rgba(10, 12, 16, 0.66); color: #fff; font: 600 12.5px/1.35 system-ui, sans-serif; letter-spacing: 0.01em; pointer-events: none; }
   figure { position: relative; }
   .chat-fab { position: fixed; right: 24px; bottom: 24px; z-index: 30; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px 0 18px; border: 0; border-radius: 999px; background: var(--k-accent); color: var(--k-accent-ink); font: 700 16px/1 var(--k-font); cursor: pointer; box-shadow: 0 12px 32px rgba(5, 10, 15, 0.3); transition: transform 160ms ease; }
@@ -240,7 +261,7 @@
     .k-callbar a { flex: 1; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 14px; font: 700 16px var(--k-font); text-decoration: none; box-shadow: 0 10px 28px rgba(5, 10, 15, 0.28); }
     .k-callbar a:first-child { background: var(--k-accent); color: var(--k-accent-ink); }
     .k-callbar a:last-child { flex: 0 0 auto; padding: 0 18px; background: var(--k-dark); color: var(--k-on-dark); }
-    .chat-fab { right: 12px; bottom: calc(max(12px, env(safe-area-inset-bottom)) + 66px); min-height: 48px; padding: 0 18px 0 14px; }
+    .chat-fab { display: none; right: 12px; bottom: calc(max(12px, env(safe-area-inset-bottom)) + 66px); min-height: 48px; padding: 0 18px 0 14px; }
     .chat { right: 8px; left: 8px; bottom: 8px; width: auto; height: min(620px, calc(100dvh - 16px)); }
     body { padding-bottom: 84px; }
   }
@@ -264,7 +285,7 @@
     <input id="chat-in" type="text" maxlength="200" placeholder="Ask about hours, location, services" aria-label="Your question" enterkeyhint="send">
     <button type="submit">Send</button>
   </form>
-  <div class="chat-note">Demo assistant by Local Studio. It answers only from Sugar Drop Baker's Google listing. For anything else, call or text.</div>
+  <div class="chat-note">Demo assistant by Whyte Web. It answers only from Sugar Drop Baker's Google listing. For anything else, call or text.</div>
 </section>
 
 <script type="application/json" id="biz">{"hours": {"Monday": "9 a.m. to 11 p.m.", "Tuesday": "9 a.m. to 11 p.m.", "Wednesday": "9 a.m. to 11 p.m.", "Thursday": "9 a.m. to 11 p.m.", "Friday": "9 a.m. to 11 p.m.", "Saturday": "9 a.m. to 11 p.m.", "Sunday": "9 a.m. to 10 p.m."}, "name": "Sugar Drop Baker", "category": "Cake shop", "area": "Mill Woods", "address": "3007 24 Ave NW, Edmonton, AB T6T 0G7", "phone": "(825) 333-0209", "tel": "+18253330209", "rating": "4.6", "reviews": "299", "maps_url": "https://www.google.com/maps/place/Sugar+drop+baker/data=!4m7!3m6!1s0x53a01968f14c2fcf:0x5d2aae18711750c7!8m2!3d53.4543621!4d-113.3839689!16s%2Fg%2F11l2ycqrr_!19sChIJzy9M8WgZoFMRx1AXcRiuKl0", "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Sugar+Drop+Baker%2C+3007+24+Ave+NW%2C+Edmonton%2C+AB+T6T+0G7", "services": [["birthday cake", 19], ["custom cake", 17], ["cake design", 13]]}</script>
@@ -316,6 +337,7 @@
   document.querySelectorAll('[data-sub]').forEach((el) => { el.textContent = sub; });
   document.querySelectorAll('[data-statesub]').forEach((el) => { el.textContent = `${state}. ${sub}.`; });
   document.querySelectorAll('[data-dot]').forEach((el) => { el.classList.toggle('closed', !open); });
+  document.querySelectorAll('[data-today]').forEach((el) => { el.textContent = hoursKnown ? ((biz.hours || {})[DAYS[today]] || 'Closed') : 'Call to check'; });
   document.querySelectorAll('[data-week]').forEach((week) => DAYS.forEach((d, k) => {
     const cell = document.createElement('div'), bar = document.createElement('i'), lbl = document.createElement('b');
     if (spans((biz.hours || {})[d]).length) bar.className = 'on';
@@ -343,8 +365,8 @@
     const known = Object.keys(biz.hours || {}).length > 0;
     const callAct = { label: 'Call ' + phone, href: 'tel:' + tel };
     const textAct = { label: 'Text', href: 'sms:' + tel, alt: true };
-    const contactActs = [callAct, textAct];
-    const noHours = { text: "I don't have hours on file. Call or text and we'll tell you.", acts: contactActs };
+    const contactActs = [callAct];
+    const noHours = { text: "I don't have hours on file. Call and we'll tell you.", acts: contactActs };
 
     function status() {
       const n = nowEdm(), t = todayIdx(), m = n.getHours() * 60 + n.getMinutes();
@@ -416,7 +438,7 @@
       'mon tue wed thu fri sat sun monday tuesday wednesday thursday friday saturday sunday').split(' '));
     [biz.name, biz.area, biz.category, ...(biz.services || []).map((s) => s[0])].forEach((s) => norm(s).trim().split(' ').forEach((w) => KNOWN.add(w)));
     const unknownWords = (q) => q.trim().split(' ').filter((w) => w && !/^\d+$/.test(w) && !KNOWN.has(w) && !KNOWN.has(stem(w)));
-    const handoff = { text: "I don't have that. I only know our hours, address, phone and what's in our Google reviews. Call or text " + phone + ' and a person will help.', acts: contactActs };
+    const handoff = { text: "I don't have that. I only know our hours, address, phone and what's in our Google reviews. Call " + phone + ' and a person will help.', acts: contactActs };
 
     // every intent a question contains contributes a part; parts are merged in the order they were asked.
     // anything that can't be answered completely (digits, dates, holidays, unknown words) hands the whole question off.
@@ -434,7 +456,7 @@
       }
       // holidays and anything we have no data for: hand off instead of guessing from a keyword
       if (R(/ (christmas|xmas|boxing day|easter|thanksgiving|halloween|new years?|canada day|victoria day|labou?r day|remembrance|family day|good friday|holidays?|stat|long weekend) /))
-        return { text: "I don't have holiday hours. Call or text " + phone + " to check before you come.", acts: contactActs };
+        return { text: "I don't have holiday hours. Call " + phone + " to check before you come.", acts: contactActs };
       if (unknownWords(q).length) return handoff;
 
       const at = (rx) => { const m = rx.exec(q); return m ? m.index : -1; };
@@ -449,16 +471,16 @@
       const book = at(/ (book|booking|appointment|appointments|reserve|reservation|walk in|walkin|walk ins|walkins|wait time|waiting|cancel|reschedule|queue) /);
       const noData = [parking, price, book].filter((i) => i >= 0);
       if (noData.length) {
-        const text = price >= 0 && book >= 0 ? "I don't have prices or payment details, and I can't book or check the wait. Call or text " + phone + " and we'll sort it out."
-          : price >= 0 ? "I don't have prices or payment details. Call or text " + phone + " and we'll quote you."
-          : book >= 0 ? "I can't book or check the wait. Call or text " + phone + " and we'll sort it out."
-          : "I don't have that on our listing. Call or text " + phone + " and we'll tell you.";
+        const text = price >= 0 && book >= 0 ? "I don't have prices or payment details, and I can't book or check the wait. Call " + phone + " and we'll sort it out."
+          : price >= 0 ? "I don't have prices or payment details. Call " + phone + " and we'll quote you."
+          : book >= 0 ? "I can't book or check the wait. Call " + phone + " and we'll sort it out."
+          : "I don't have that on our listing. Call " + phone + " and we'll tell you.";
         parts.push({ i: Math.min(...noData), text, acts: contactActs });
       }
       if (!noData.length)
-        push(/ (phone|number|call|text|contact|reach|email|dm|message|instagram|facebook) /, 'Call or text ' + phone + '.', contactActs);
+        push(/ (phone|number|call|text|contact|reach|email|dm|message|instagram|facebook) /, 'Call ' + phone + '.', contactActs);
       push(/ (where|address|location|directions?|map|maps|find you|get there|located|street|how do i get|near|nearby) /,
-        biz.address ? 'We are at ' + biz.address + '.' : 'Call or text for our address.',
+        biz.address ? 'We are at ' + biz.address + '.' : 'Call for our address.',
         [{ label: 'Get directions', href: biz.directions_url }, { label: 'Open in Maps', href: biz.maps_url, alt: true }]);
 
       const svcs = matchServices(q);
@@ -467,7 +489,7 @@
       const listAsked = / (services?|offer|menu|specialt(y|ies)) /.test(q);
       if (listAsked || !svcs.length) {
         const list = (biz.services || []).map((s) => s[0] + ' (' + s[1] + ' reviews)').join(', ');
-        push(listAsked ? / (services?|offer|menu|specialt(y|ies)) / : listRx, list ? 'What reviewers mention most: ' + list + '.' + (noPrices ? ' For the full list and prices, call or text ' + phone + '.' : '') : 'Call or text ' + phone + ' to ask what we offer.', contactActs);
+        push(listAsked ? / (services?|offer|menu|specialt(y|ies)) / : listRx, list ? 'What reviewers mention most: ' + list + '.' + (noPrices ? ' For the full list and prices, call or text ' + phone + '.' : '') : 'Call ' + phone + ' to ask what we offer.', contactActs);
       } else {
         const named = svcs.map((s) => s[0] + ' (' + s[1] + ' reviews)');
         const list = named.length > 1 ? named.slice(0, -1).join(', ') + ' and ' + named[named.length - 1] : named[0];
@@ -505,7 +527,7 @@
           } else if (s.next) {
             text = asksOpen || asksClose ? 'We open ' + when(s.next) + ' at ' + s.next.at + (asksClose ? ' and close at ' + s.next.end : '') + '.'
               : (onlyClosed ? 'Yes, we are closed right now. ' : 'We are closed right now. ') + 'We open ' + when(s.next) + ' at ' + s.next.at + '.';
-          } else text = 'Call or text for our hours.';
+          } else text = 'Call for our hours.';
           parts.push({ i: off + oc.index, text });
         }
       });
@@ -541,7 +563,7 @@
     function start() {
       paintStatus();
       add('bot', 'Hi! I can answer questions about ' + biz.name + ': hours, where we are, services. For anything else I will point you to call or text.');
-      [['Open now?', 'Are you open now?'], ['Hours', 'What are your hours?'], ['Where are you?', 'Where are you located?'], ['Services', 'What services do you offer?'], ['Call or text', 'What is your phone number?']].forEach(([label, q]) => {
+      [['Open now?', 'Are you open now?'], ['Hours', 'What are your hours?'], ['Where are you?', 'Where are you located?'], ['Services', 'What services do you offer?'], ['Call', 'What is your phone number?']].forEach(([label, q]) => {
         const b = document.createElement('button'); b.type = 'button'; b.textContent = label;
         b.addEventListener('click', () => ask(q)); chips.append(b);
       });
